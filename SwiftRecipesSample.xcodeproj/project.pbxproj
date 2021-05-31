@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		620DBDF226639AFA00C64C1F /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620DBDF126639AFA00C64C1F /* R.generated.swift */; };
+		620DBDF52663A11700C64C1F /* Rswift in Frameworks */ = {isa = PBXBuildFile; productRef = 620DBDF42663A11700C64C1F /* Rswift */; };
 		62D7FFBC265A9E9D0008F085 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D7FFBB265A9E9D0008F085 /* AppDelegate.swift */; };
 		62D7FFBE265A9E9D0008F085 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D7FFBD265A9E9D0008F085 /* SceneDelegate.swift */; };
 		62D7FFC5265A9E9E0008F085 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62D7FFC4265A9E9E0008F085 /* Assets.xcassets */; };
@@ -16,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		620DBDF126639AFA00C64C1F /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		62D7FFB8265A9E9D0008F085 /* SwiftRecipesSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftRecipesSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62D7FFBB265A9E9D0008F085 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		62D7FFBD265A9E9D0008F085 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				620DBDF52663A11700C64C1F /* Rswift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +81,7 @@
 			children = (
 				62D7FFBD265A9E9D0008F085 /* SceneDelegate.swift */,
 				62D7FFBB265A9E9D0008F085 /* AppDelegate.swift */,
+				620DBDF126639AFA00C64C1F /* R.generated.swift */,
 				62D7FFD2265AA0040008F085 /* Views */,
 			);
 			path = Scripts;
@@ -114,6 +119,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 62D7FFCC265A9E9E0008F085 /* Build configuration list for PBXNativeTarget "SwiftRecipesSample" */;
 			buildPhases = (
+				620DBDF02663980C00C64C1F /* R.swift */,
 				62D7FFB4265A9E9D0008F085 /* Sources */,
 				62D7FFB5265A9E9D0008F085 /* Frameworks */,
 				62D7FFB6265A9E9D0008F085 /* Resources */,
@@ -123,6 +129,9 @@
 			dependencies = (
 			);
 			name = SwiftRecipesSample;
+			packageProductDependencies = (
+				620DBDF42663A11700C64C1F /* Rswift */,
+			);
 			productName = SwiftRecipesSample;
 			productReference = 62D7FFB8265A9E9D0008F085 /* SwiftRecipesSample.app */;
 			productType = "com.apple.product-type.application";
@@ -150,6 +159,9 @@
 				Base,
 			);
 			mainGroup = 62D7FFAF265A9E9D0008F085;
+			packageReferences = (
+				620DBDF32663A11700C64C1F /* XCRemoteSwiftPackageReference "R.swift" */,
+			);
 			productRefGroup = 62D7FFB9265A9E9D0008F085 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -172,6 +184,29 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		620DBDF02663980C00C64C1F /* R.swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			name = R.swift;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/SwiftRecipesSample/Scripts/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if mint list | grep -q 'R.swift'; then\nmint run R.swift rswift generate \"$SRCROOT/SwiftRecipesSample/Scripts/R.generated.swift\"\nelse\necho \"error: R.swift not installed; run 'mint bootstrap' to install\"\nreturn -1\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		62D7FFB4265A9E9D0008F085 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -180,6 +215,7 @@
 				62D7FFBC265A9E9D0008F085 /* AppDelegate.swift in Sources */,
 				62D7FFD6265AA0250008F085 /* CreateProjectSampleViewController.swift in Sources */,
 				62D7FFBE265A9E9D0008F085 /* SceneDelegate.swift in Sources */,
+				620DBDF226639AFA00C64C1F /* R.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,6 +407,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		620DBDF32663A11700C64C1F /* XCRemoteSwiftPackageReference "R.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mac-cain13/R.swift.Library";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 5.4.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		620DBDF42663A11700C64C1F /* Rswift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 620DBDF32663A11700C64C1F /* XCRemoteSwiftPackageReference "R.swift" */;
+			productName = Rswift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 62D7FFB0265A9E9D0008F085 /* Project object */;
 }
