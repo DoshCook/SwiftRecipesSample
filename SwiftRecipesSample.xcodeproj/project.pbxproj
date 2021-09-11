@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		620DBDF226639AFA00C64C1F /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620DBDF126639AFA00C64C1F /* R.generated.swift */; };
 		620DBDF52663A11700C64C1F /* Rswift in Frameworks */ = {isa = PBXBuildFile; productRef = 620DBDF42663A11700C64C1F /* Rswift */; };
+		624EF69E26ECF12800928D18 /* BasicLabelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 624EF69C26ECF12800928D18 /* BasicLabelViewController.swift */; };
+		624EF69F26ECF12800928D18 /* BasicLabelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 624EF69D26ECF12800928D18 /* BasicLabelViewController.xib */; };
 		62D7FFBC265A9E9D0008F085 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D7FFBB265A9E9D0008F085 /* AppDelegate.swift */; };
 		62D7FFBE265A9E9D0008F085 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D7FFBD265A9E9D0008F085 /* SceneDelegate.swift */; };
 		62D7FFC5265A9E9E0008F085 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62D7FFC4265A9E9E0008F085 /* Assets.xcassets */; };
@@ -19,6 +21,8 @@
 
 /* Begin PBXFileReference section */
 		620DBDF126639AFA00C64C1F /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		624EF69C26ECF12800928D18 /* BasicLabelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicLabelViewController.swift; sourceTree = "<group>"; };
+		624EF69D26ECF12800928D18 /* BasicLabelViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicLabelViewController.xib; sourceTree = "<group>"; };
 		62D7FFB8265A9E9D0008F085 /* SwiftRecipesSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftRecipesSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62D7FFBB265A9E9D0008F085 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		62D7FFBD265A9E9D0008F085 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +45,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		624EF69B26ECF10600928D18 /* BasicLabelSample */ = {
+			isa = PBXGroup;
+			children = (
+				624EF69C26ECF12800928D18 /* BasicLabelViewController.swift */,
+				624EF69D26ECF12800928D18 /* BasicLabelViewController.xib */,
+			);
+			path = BasicLabelSample;
+			sourceTree = "<group>";
+		};
 		62D7FFAF265A9E9D0008F085 = {
 			isa = PBXGroup;
 			children = (
@@ -98,6 +111,7 @@
 		62D7FFD2265AA0040008F085 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				624EF69B26ECF10600928D18 /* BasicLabelSample */,
 				62D7FFD3265AA00A0008F085 /* CreateProjectSample */,
 			);
 			path = Views;
@@ -179,6 +193,7 @@
 			files = (
 				62D7FFC8265A9E9E0008F085 /* LaunchScreen.storyboard in Resources */,
 				62D7FFC5265A9E9E0008F085 /* Assets.xcassets in Resources */,
+				624EF69F26ECF12800928D18 /* BasicLabelViewController.xib in Resources */,
 				62D7FFD7265AA0250008F085 /* CreateProjectSampleViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -233,6 +248,7 @@
 			files = (
 				62D7FFBC265A9E9D0008F085 /* AppDelegate.swift in Sources */,
 				62D7FFD6265AA0250008F085 /* CreateProjectSampleViewController.swift in Sources */,
+				624EF69E26ECF12800928D18 /* BasicLabelViewController.swift in Sources */,
 				62D7FFBE265A9E9D0008F085 /* SceneDelegate.swift in Sources */,
 				620DBDF226639AFA00C64C1F /* R.generated.swift in Sources */,
 			);
