@@ -123,6 +123,7 @@
 				62D7FFB4265A9E9D0008F085 /* Sources */,
 				62D7FFB5265A9E9D0008F085 /* Frameworks */,
 				62D7FFB6265A9E9D0008F085 /* Resources */,
+				6251193D26ECBBA900479A85 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -204,6 +205,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "if mint list | grep -q 'R.swift'; then\nmint run R.swift rswift generate \"$SRCROOT/SwiftRecipesSample/Scripts/R.generated.swift\"\nelse\necho \"error: R.swift not installed; run 'mint bootstrap' to install\"\nreturn -1\nfi\n";
+		};
+		6251193D26ECBBA900479A85 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which mint >/dev/null; then\n  mint run swiftlint swiftlint autocorrect --format\n  mint run swiftlint swiftlint\nelse\n  echo \"warning: Mint not installed, download from https://github.com/yonaskolb/Mint\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
