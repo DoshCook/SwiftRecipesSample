@@ -11,6 +11,9 @@
 		620DBDF52663A11700C64C1F /* Rswift in Frameworks */ = {isa = PBXBuildFile; productRef = 620DBDF42663A11700C64C1F /* Rswift */; };
 		624EF69E26ECF12800928D18 /* BasicLabelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 624EF69C26ECF12800928D18 /* BasicLabelViewController.swift */; };
 		624EF69F26ECF12800928D18 /* BasicLabelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 624EF69D26ECF12800928D18 /* BasicLabelViewController.xib */; };
+		626AE30A2821497400968E8C /* DottedBorderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626AE3082821497400968E8C /* DottedBorderViewController.swift */; };
+		626AE30B2821497400968E8C /* DottedBorderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 626AE3092821497400968E8C /* DottedBorderViewController.xib */; };
+		626AE30E282149C400968E8C /* UIView+DottedBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626AE30D282149C400968E8C /* UIView+DottedBorder.swift */; };
 		62D7FFBC265A9E9D0008F085 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D7FFBB265A9E9D0008F085 /* AppDelegate.swift */; };
 		62D7FFBE265A9E9D0008F085 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D7FFBD265A9E9D0008F085 /* SceneDelegate.swift */; };
 		62D7FFC5265A9E9E0008F085 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62D7FFC4265A9E9E0008F085 /* Assets.xcassets */; };
@@ -23,6 +26,9 @@
 		620DBDF126639AFA00C64C1F /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		624EF69C26ECF12800928D18 /* BasicLabelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicLabelViewController.swift; sourceTree = "<group>"; };
 		624EF69D26ECF12800928D18 /* BasicLabelViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicLabelViewController.xib; sourceTree = "<group>"; };
+		626AE3082821497400968E8C /* DottedBorderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DottedBorderViewController.swift; sourceTree = "<group>"; };
+		626AE3092821497400968E8C /* DottedBorderViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DottedBorderViewController.xib; sourceTree = "<group>"; };
+		626AE30D282149C400968E8C /* UIView+DottedBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+DottedBorder.swift"; sourceTree = "<group>"; };
 		62D7FFB8265A9E9D0008F085 /* SwiftRecipesSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftRecipesSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62D7FFBB265A9E9D0008F085 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		62D7FFBD265A9E9D0008F085 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -52,6 +58,23 @@
 				624EF69D26ECF12800928D18 /* BasicLabelViewController.xib */,
 			);
 			path = BasicLabelSample;
+			sourceTree = "<group>";
+		};
+		626AE3072821495800968E8C /* DottedBorder */ = {
+			isa = PBXGroup;
+			children = (
+				626AE3082821497400968E8C /* DottedBorderViewController.swift */,
+				626AE3092821497400968E8C /* DottedBorderViewController.xib */,
+			);
+			path = DottedBorder;
+			sourceTree = "<group>";
+		};
+		626AE30C282149B200968E8C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				626AE30D282149C400968E8C /* UIView+DottedBorder.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		62D7FFAF265A9E9D0008F085 = {
@@ -95,6 +118,7 @@
 				62D7FFBD265A9E9D0008F085 /* SceneDelegate.swift */,
 				62D7FFBB265A9E9D0008F085 /* AppDelegate.swift */,
 				620DBDF126639AFA00C64C1F /* R.generated.swift */,
+				626AE30C282149B200968E8C /* Extensions */,
 				62D7FFD2265AA0040008F085 /* Views */,
 			);
 			path = Scripts;
@@ -113,6 +137,7 @@
 			children = (
 				624EF69B26ECF10600928D18 /* BasicLabelSample */,
 				62D7FFD3265AA00A0008F085 /* CreateProjectSample */,
+				626AE3072821495800968E8C /* DottedBorder */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -194,6 +219,7 @@
 				62D7FFC8265A9E9E0008F085 /* LaunchScreen.storyboard in Resources */,
 				62D7FFC5265A9E9E0008F085 /* Assets.xcassets in Resources */,
 				624EF69F26ECF12800928D18 /* BasicLabelViewController.xib in Resources */,
+				626AE30B2821497400968E8C /* DottedBorderViewController.xib in Resources */,
 				62D7FFD7265AA0250008F085 /* CreateProjectSampleViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -246,11 +272,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				626AE30A2821497400968E8C /* DottedBorderViewController.swift in Sources */,
 				62D7FFBC265A9E9D0008F085 /* AppDelegate.swift in Sources */,
 				62D7FFD6265AA0250008F085 /* CreateProjectSampleViewController.swift in Sources */,
 				624EF69E26ECF12800928D18 /* BasicLabelViewController.swift in Sources */,
 				62D7FFBE265A9E9D0008F085 /* SceneDelegate.swift in Sources */,
 				620DBDF226639AFA00C64C1F /* R.generated.swift in Sources */,
+				626AE30E282149C400968E8C /* UIView+DottedBorder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,6 +418,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q2UN54KG3Y;
 				INFOPLIST_FILE = SwiftRecipesSample/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -408,6 +437,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q2UN54KG3Y;
 				INFOPLIST_FILE = SwiftRecipesSample/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

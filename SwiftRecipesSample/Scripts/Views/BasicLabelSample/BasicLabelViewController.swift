@@ -15,7 +15,7 @@ final class BasicLabelViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         // ラベルの色をまとめて変更する
         labels.forEach {
             $0.textColor = .systemBlue
