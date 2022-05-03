@@ -13,9 +13,12 @@ final class DottedBorderViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        cardView.layer.cornerRadius = 8
-        cardView.dottedBorder(color: UIColor.yellow, dotSize: 8, offset: 10)
     }
 
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+
+        cardView.layer.cornerRadius = 8
+        cardView.dottedBorder(color: UIColor.systemPink, dotSize: 6, offset: 10)
+    }
 }
